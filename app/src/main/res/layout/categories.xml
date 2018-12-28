@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:context=".View.Fragments.SearchArticleFragment"
+                tools:showIn="@layout/search_article_fragment"
+>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:id="@+id/slideViewCategories"
+                  android:orientation="vertical"
+                  android:layout_marginTop="100dp"
+                  android:background="@drawable/black_gradient_slide_down">
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Slide down to close"
+                  android:id="@+id/slideDownTV"
+                  android:gravity="center_horizontal"
+                  android:layout_marginTop="16dp"
+                  android:textColor="@android:color/darker_gray"
+                  android:background="@color/dark"/>
+        <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+        />
+        <TextView
+                android:text="@string/social"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/textView"
+                android:textColor="@android:color/background_light" android:textStyle="bold" android:gravity="center"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <Button
+                    android:text="@string/Most_emailed"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp" android:id="@+id/most_emailed" android:layout_weight="1"
+                    android:background="@drawable/selector" android:layout_margin="8dp"
+            />
+            <Button
+                    android:text="@string/Most_shared"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp" android:id="@+id/most_shared" android:layout_weight="1"
+                    android:background="@drawable/selector" android:layout_margin="8dp"
+            />
+            <Button
+                    android:text="@string/Most_viewed"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp" android:id="@+id/most_viewed" android:layout_weight="1"
+                    android:background="@drawable/selector" android:layout_margin="8dp"
+            />
+        </LinearLayout>
+        <View
+                android:id="@+id/divider5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+        />
+        <TextView
+                android:text="Time Period"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/textView2" android:gravity="center"
+                android:textStyle="bold" android:textColor="@android:color/background_light"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:gravity="center">
+            <Button
+                    android:text="1 month"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp" android:id="@+id/one_month"
+                    android:width="2dp" android:background="@drawable/selector" android:layout_margin="8dp"
+            />
+            <Button
+                    android:text="1 Day"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp" android:id="@+id/one_day"
+                    android:layout_marginLeft="5dp" android:width="2dp" android:background="@drawable/selector"
+                    android:layout_margin="8dp"/>
+            <Button
+                    android:text="7 Days"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp" android:id="@+id/seven_day"
+                    android:layout_marginLeft="20dp" android:width="2dp" android:background="@drawable/selector"
+                    android:layout_margin="8dp"/>
+        </LinearLayout>
+        <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+        />
+        <TextView
+                android:text="Categories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/textView3" android:gravity="center"
+                android:textStyle="bold" android:textColor="@android:color/background_light"/>
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="vertical" android:gravity="center">
+                <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:gravity="center">
+
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" android:orientation="horizontal"
+                            android:layout_weight="1" android:gravity="center">
+                        <Button
+                                android:text="@string/all_sections"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/all_sections"
+                                android:textSize="10sp"
+                                android:layout_marginLeft="0dp" android:layout_marginRight="0dp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                        <Button
+                                android:text="@string/arts"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/arts"
+                                android:textSize="10sp"
+                                android:layout_marginLeft="0dp" android:layout_marginRight="0dp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                        <Button
+                                android:text="@string/automobiles"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/automobiles"
+                                android:textSize="10sp"
+                                android:layout_marginLeft="0dp" android:layout_marginRight="0dp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                    </TableRow>
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" android:gravity="center">
+                        <Button
+                                android:text="@string/books"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/books"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                        <Button
+                                android:text="@string/business_day"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/business_day"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                        <Button
+                                android:text="@string/education"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/education"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                    </TableRow>
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" android:gravity="center">
+                        <Button
+                                android:text="@string/food"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/food"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                        <Button
+                                android:text="@string/health"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/health"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                        <Button
+                                android:text="@string/job_market"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/job_market"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                    </TableRow>
+                    <TableRow android:layout_width="match_parent" android:layout_height="match_parent"
+                              android:gravity="center">
+                        <Button
+                                android:text="@string/membercenter"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/membercenter"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                        <Button
+                                android:text="@string/movies"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/movies"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                        <Button
+                                android:text="@string/multimedia"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/multimedia"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                    </TableRow>
+                    <TableRow android:layout_width="match_parent" android:layout_height="match_parent"
+                              android:gravity="center">
+                        <Button
+                                android:text="@string/NYTNow"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/NYTNow"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                        <Button
+                                android:text="@string/Obituaries"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/obituaries"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                        <Button
+                                android:text="@string/Open"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/open"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                    </TableRow>
+                    <TableRow android:layout_width="match_parent" android:layout_height="match_parent"
+                              android:gravity="center">
+                        <Button
+                                android:text="@string/Public_Editor"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/public_editor"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                        <Button
+                                android:text="@string/Real_Estate"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/real_estate"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                        <Button
+                                android:text="@string/Science"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/science"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                    </TableRow>
+                    <TableRow android:layout_width="match_parent" android:layout_height="match_parent"
+                              android:gravity="center">
+                        <Button
+                                android:text="@string/Style"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/style"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                        <Button
+                                android:text="@string/Sunday_Review"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/sunday_review"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                        <Button
+                                android:text="@string/T_Magazine"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/t_magazine"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                    </TableRow>
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" android:gravity="center">
+                        <Button
+                                android:text="@string/The_Upshot"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/the_upshot"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                        <Button
+                                android:text="@string/Theater"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/theater"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                        <Button
+                                android:text="@string/Times_Insider"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/times_insider"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                    </TableRow>
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" android:gravity="center">
+                        <Button
+                                android:text="@string/Travel"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/travel"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                        <Button
+                                android:text="@string/US"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/u_s"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                        <Button
+                                android:text="@string/World"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/world_category"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                    </TableRow>
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" android:gravity="center">
+                        <Button
+                                android:text="@string/blogs"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/blogs"
+                                android:textSize="10sp"
+                                android:layout_marginLeft="0dp" android:layout_marginRight="0dp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                        <Button
+                                android:text="@string/fashion_and_style"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/fashion_and_style"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                        <Button
+                                android:text="@string/magazine"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/magazine"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                    </TableRow>
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" android:gravity="center">
+                        <Button
+                                android:text="@string/NY202F20Region"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/NY202F20Region"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                        <Button
+                                android:text="@string/Opinion"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/opinion"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                        <Button
+                                android:text="@string/Sports"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/sports"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                    </TableRow>
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" android:gravity="center">
+                        <Button
+                                android:text="@string/Technology"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/technology"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                        <Button
+                                android:text="@string/Todays_Paper"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/todays_paper"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                        <Button
+                                android:text="@string/Your_Money"
+                                android:layout_width="100dp"
+                                android:layout_height="45dp" android:id="@+id/your_money_category"
+                                android:textSize="10sp"
+                                android:layout_margin="7dp" android:background="@drawable/selector"
+                        />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

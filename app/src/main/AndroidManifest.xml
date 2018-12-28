@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:app="http://schemas.android.com/apk/res-auto"
+          package="com.example.nytdevelopersmpapiclient">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+            android:name=".DaggerDI.NTArticlesApp"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <activity android:name=".View.AboutArticleWebActivity">
+        </activity>
+        <activity
+                android:name=".View.MainViewPageActivity"
+                android:label="@string/title_activity_main_view_page"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

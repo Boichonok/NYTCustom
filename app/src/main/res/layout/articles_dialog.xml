@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:id="@+id/article_dialog"
+              android:background="@drawable/shape_dialog">
+
+        <TextView
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/title_article_dialog"
+                android:textSize="18sp"
+                app:fontFamily="casual"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textColor="@android:color/background_light"
+                android:layout_margin="8dp"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/abstract_article_dialog"
+                app:fontFamily="sans-serif-smallcaps"
+                android:textAllCaps="false"
+                android:textColor="@android:color/background_light" android:layout_margin="8dp"/>
+        <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+        />
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                        android:text="Source"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/source_article_dialog"
+                        android:layout_weight="1"
+                        app:fontFamily="casual" android:textSize="12sp" android:textStyle="bold|italic"
+                        android:textColor="@android:color/background_light" android:layout_margin="8dp"/>
+                <TextView
+                        android:text="Author"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/by_line_article_dialog"
+                        android:layout_weight="1" android:textSize="12sp" android:textStyle="bold|italic"
+                        app:fontFamily="casual" android:textColor="@android:color/background_light"
+                        android:layout_margin="8dp"/>
+                <TextView
+                        android:text="Published date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/published_date_articles_dialog"
+                        android:layout_weight="1" app:fontFamily="casual" android:textSize="12sp"
+                        android:textStyle="bold|italic" android:textColor="@android:color/background_light"
+                        android:layout_margin="8dp"/>
+        </LinearLayout>
+        <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+        />
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                        android:text="Save"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp" android:id="@+id/save_button" android:layout_weight="1"
+                        android:background="@drawable/shape_btn" android:layout_margin="8dp" android:typeface="normal"
+                        android:textSize="18sp" android:lineSpacingExtra="18sp" android:textColor="@color/dark"
+                        android:textStyle="bold" android:fontFamily="casual"/>
+                <Button
+                        android:text="Close"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp" android:id="@+id/cancel_button"
+                        android:textSize="18sp" android:typeface="normal" android:lineSpacingExtra="18sp"
+                        android:textStyle="bold" android:textColor="@color/dark"
+                        android:background="@drawable/shape_btn"
+                        android:layout_margin="8dp" android:layout_weight="1" android:fontFamily="casual"/>
+        </LinearLayout>
+</LinearLayout>
