@@ -1,4 +1,4 @@
-package com.example.nytdevelopersmpapiclient.Model.Repository
+package com.example.nytdevelopersmpapiclient.Model.Repository.OldRepository
 
 import com.example.nytdevelopersmpapiclient.Model.Repository.LocalRoomDataBase.Entity.ArticleMainInfo
 import com.example.nytdevelopersmpapiclient.Model.Repository.Network.Entity.ArticleResponse

@@ -1,18 +1,26 @@
-package com.example.nytdevelopersmpapiclient.Model.Repository
+package com.example.nytdevelopersmpapiclient.Model.Repository.OldRepository
 
-import android.arch.lifecycle.LiveData
 import android.content.Context
 import com.example.nytdevelopersmpapiclient.Model.Repository.LocalRoomDataBase.DAO.ArticleMainInfoDAO
 import com.example.nytdevelopersmpapiclient.Model.Repository.LocalRoomDataBase.Entity.ArticleMainInfo
-import com.example.nytdevelopersmpapiclient.Model.Repository.LocalRoomDataBase.Room.ArticleRoomDataBase
 import com.example.nytdevelopersmpapiclient.Model.Repository.Network.API.API
 import com.example.nytdevelopersmpapiclient.Model.Repository.Network.API.APIService
 import com.example.nytdevelopersmpapiclient.Model.Repository.Network.Entity.ArticleResponse
-import io.reactivex.Completable
 import io.reactivex.Flowable
+import javax.inject.Inject
 
-class ArticleNTRepository : NtArticleRepository,FavoriteArticlesRepository {
+class ArticleNTRepository : NtArticleRepository, FavoriteArticlesRepository {
 
+    @Inject
+    protected lateinit var articleMainInfoDAO: ArticleMainInfoDAO
+
+    @Inject
+    protected lateinit var newYourTimesAPI: API
+
+    constructor(context: Context)
+    {
+        //NTArticlesApp.getMostPopularAPIComponent().inject(this)
+    }
 
 
     override fun saveArticle(articleMainInfo: ArticleMainInfo) {
@@ -33,7 +41,7 @@ class ArticleNTRepository : NtArticleRepository,FavoriteArticlesRepository {
     }
 
     override fun getItemUrlByTitle(title:String): String {
-       return articleMainInfoDAO.getItemUrlByTitle(title)
+        return articleMainInfoDAO.getItemUrlByTitle(title)
     }
 
 
@@ -51,27 +59,15 @@ class ArticleNTRepository : NtArticleRepository,FavoriteArticlesRepository {
 
 
     override fun deleteAllFavoriteArticle() {
-         articleMainInfoDAO.deleteAllArticles()
+        articleMainInfoDAO.deleteAllArticles()
     }
 
     override fun deleteFavoriteArticleById(id: Int) {
-         articleMainInfoDAO.deleteArticleByID(id)
+        articleMainInfoDAO.deleteArticleByID(id)
     }
 
     override fun getAllFavoriteArticles():Flowable<List<ArticleMainInfo>> { //LiveData<List<ArticleMainInfo>> {
         return  articleMainInfoDAO.getAllArticles()
-    }
-
-    private  var articleMainInfoDAO: ArticleMainInfoDAO
-    private  var newYourTimesAPI: API
-
-    constructor(context: Context)
-    {
-        var dataBase = ArticleRoomDataBase.getDataBase(context)
-        articleMainInfoDAO = dataBase!!.ArticleMainInfoDAO()
-
-        newYourTimesAPI = APIService.getInstance()
-
     }
 
 }
